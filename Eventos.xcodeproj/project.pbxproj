@@ -14,6 +14,8 @@
 		3D51F314236CCD06008E1901 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D51F312236CCD06008E1901 /* LaunchScreen.storyboard */; };
 		3D51F31F236CCD06008E1901 /* EventosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D51F31E236CCD06008E1901 /* EventosTests.swift */; };
 		3D51F32A236CCD06008E1901 /* EventosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D51F329236CCD06008E1901 /* EventosUITests.swift */; };
+		3D51F33E236CCE3D008E1901 /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D51F33D236CCE3D008E1901 /* Evento.swift */; };
+		3D51F340236CD0CE008E1901 /* celdaEventoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D51F33F236CD0CE008E1901 /* celdaEventoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		3D51F325236CCD06008E1901 /* EventosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D51F329236CCD06008E1901 /* EventosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventosUITests.swift; sourceTree = "<group>"; };
 		3D51F32B236CCD06008E1901 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D51F33D236CCE3D008E1901 /* Evento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
+		3D51F33F236CD0CE008E1901 /* celdaEventoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdaEventoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +101,11 @@
 		3D51F308236CCD04008E1901 /* Eventos */ = {
 			isa = PBXGroup;
 			children = (
-				3D51F309236CCD04008E1901 /* AppDelegate.swift */,
-				3D51F30B236CCD04008E1901 /* ViewController.swift */,
-				3D51F30D236CCD04008E1901 /* Main.storyboard */,
-				3D51F310236CCD06008E1901 /* Assets.xcassets */,
-				3D51F312236CCD06008E1901 /* LaunchScreen.storyboard */,
-				3D51F315236CCD06008E1901 /* Info.plist */,
+				3D51F33C236CCD71008E1901 /* Models */,
+				3D51F33B236CCD66008E1901 /* ViewControllers */,
+				3D51F33A236CCD54008E1901 /* Storyboard */,
+				3D51F339236CCD42008E1901 /* App */,
+				3D51F338236CCD34008E1901 /* Resources */,
 			);
 			path = Eventos;
 			sourceTree = "<group>";
@@ -123,6 +126,49 @@
 				3D51F32B236CCD06008E1901 /* Info.plist */,
 			);
 			path = EventosUITests;
+			sourceTree = "<group>";
+		};
+		3D51F338236CCD34008E1901 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3D51F310236CCD06008E1901 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3D51F339236CCD42008E1901 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3D51F309236CCD04008E1901 /* AppDelegate.swift */,
+				3D51F315236CCD06008E1901 /* Info.plist */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		3D51F33A236CCD54008E1901 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3D51F30D236CCD04008E1901 /* Main.storyboard */,
+				3D51F312236CCD06008E1901 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		3D51F33B236CCD66008E1901 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3D51F30B236CCD04008E1901 /* ViewController.swift */,
+				3D51F33F236CD0CE008E1901 /* celdaEventoController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3D51F33C236CCD71008E1901 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D51F33D236CCE3D008E1901 /* Evento.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +302,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D51F340236CD0CE008E1901 /* celdaEventoController.swift in Sources */,
+				3D51F33E236CCE3D008E1901 /* Evento.swift in Sources */,
 				3D51F30C236CCD04008E1901 /* ViewController.swift in Sources */,
 				3D51F30A236CCD04008E1901 /* AppDelegate.swift in Sources */,
 			);
