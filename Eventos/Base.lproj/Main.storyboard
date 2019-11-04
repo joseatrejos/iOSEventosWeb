@@ -67,6 +67,12 @@
                                             <constraint firstItem="CNO-pd-lB7" firstAttribute="leading" secondItem="MGP-Vm-zGI" secondAttribute="leading" constant="20" id="hBS-uQ-QsW"/>
                                             <constraint firstItem="zQd-DM-eGK" firstAttribute="top" secondItem="MGP-Vm-zGI" secondAttribute="top" constant="25" id="jzQ-vU-zVw"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="imgEvento" destination="oy3-sc-n1E" id="WLk-r0-574"/>
+                                            <outlet property="lblFecha" destination="zQd-DM-eGK" id="aPu-lH-JLY"/>
+                                            <outlet property="lblLugar" destination="CNO-pd-lB7" id="uM7-jA-KNt"/>
+                                            <outlet property="lblNombre" destination="OLo-Vu-TjF" id="fwf-Su-kfi"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
