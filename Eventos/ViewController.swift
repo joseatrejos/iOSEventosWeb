@@ -8,14 +8,15 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var eventos : [Evento] = []
+    @IBOutlet weak var TvEventos: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         AF.request("http://localhost:8888/Eventos/wp-json/wp/v2/eventos").responseJSON {
             response in
             
@@ -28,6 +29,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                 self.eventos.append(nuevoEvento)
                             }
                         }
+                        self.TvEventos.reloadData()
                     }
                 case .failure(_) :
                         print("Algo salió mal loco")
@@ -49,8 +51,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         celda?.lblNombre.text = eventos[indexPath.row].nombre
         celda?.lblFecha.text = eventos[indexPath.row].fecha
         celda?.lblLugar.text = eventos[indexPath.row].lugar
+        celda?.lblTipoEvento.text = eventos[indexPath.row].tipoEvento
+        
+        AF.request(eventos[indexPath.row].urlFlyer).responseImage {
+            
+            response in
+            switch(response.result) {
+                case .success(let data):
+                    celda?.imgEvento.image = data
+                case .failure (_) :
+                    print("Algo salió mal con la imagen locoo")
+            }
+        }
         
         return celda!
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 227
+    }
 }

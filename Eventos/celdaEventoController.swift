@@ -15,5 +15,5 @@ class celdaEventoController : UITableViewCell {
     @IBOutlet weak var lblFecha: UILabel!
     @IBOutlet weak var lblLugar: UILabel!
     @IBOutlet weak var imgEvento: UIImageView!
-    
+    @IBOutlet weak var lblTipoEvento: UILabel!
 }
